@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Adbrain.FullStack.Domain.Interfaces
 {
-   public interface IRedditDomainService
+   public interface IOnlineRedditDomainService
    {
       string JsonRaw { get; }
 

@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace Adbrain.FullStack.Domain.DomainService
 {
-   public class RedditDomainService : IRedditDomainService
+   public class OnlineRedditDomainService : IOnlineRedditDomainService
    {
       #region Member Variables
       private string _jsonRaw;
@@ -37,7 +37,7 @@ namespace Adbrain.FullStack.Domain.DomainService
       #endregion
 
       #region Constructors
-      public RedditDomainService(string url, string category, int count)
+      public OnlineRedditDomainService(string url, string category, int count)
       {
          Url = string.Format("{0}{1}.json?limit={2}", url, category, count.ToString());
       }

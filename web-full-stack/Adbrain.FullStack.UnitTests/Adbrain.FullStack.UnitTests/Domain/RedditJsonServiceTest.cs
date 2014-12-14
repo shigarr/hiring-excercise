@@ -11,13 +11,13 @@ using Adbrain.FullStack.Domain.Entities;
 
 namespace Adbrain.FullStack.UnitTests.Domain
 {
-   public class when_working_with_reddit_json_service : Specification
+   public class when_working_with_online_reddit_json_service : Specification
    {
    }
 
-   public class and_parsing_json_data : when_working_with_reddit_json_service
+   public class and_parsing_json_data : when_working_with_online_reddit_json_service
    {
-      private IRedditDomainService redditDomainService;
+      private IOnlineRedditDomainService redditDomainService;
 
       protected override void Establish_context()
       {
@@ -29,7 +29,7 @@ namespace Adbrain.FullStack.UnitTests.Domain
          string url = "http://www.reddit.com/r/";
          string category = "sports";
          int count = 100;
-         redditDomainService = new RedditDomainService(url, category, count);
+         redditDomainService = new OnlineRedditDomainService(url, category, count);
       }
 
       [Test]
