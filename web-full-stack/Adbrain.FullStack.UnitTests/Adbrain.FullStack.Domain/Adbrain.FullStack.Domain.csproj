@@ -45,7 +45,12 @@
   <ItemGroup>
     <Compile Include="DomainService\RedditDomainService.cs" />
     <Compile Include="Entities\BaseEntity.cs" />
+    <Compile Include="Entities\Media.cs" />
+    <Compile Include="Entities\MediaEmbed.cs" />
+    <Compile Include="Entities\ModReport.cs" />
+    <Compile Include="Entities\OEmbed.cs" />
     <Compile Include="Entities\RedditPost.cs" />
+    <Compile Include="Entities\UserReport.cs" />
     <Compile Include="Factory\RedditPostFactory.cs" />
     <Compile Include="Interfaces\IRedditDomainService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

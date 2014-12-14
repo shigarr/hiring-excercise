@@ -48,7 +48,7 @@ namespace Adbrain.FullStack.Domain.DomainService
       public List<RedditPost> GetRedditPosts()
       {
          dynamic jsonObject = JsonConvert.DeserializeObject(JsonRaw);
-         List<JToken> children = jsonObject.data.children;
+         List<JToken> children = ((JArray)jsonObject.data.children).ToList();
          List<RedditPost> redditPosts = new List<RedditPost>();
          children.ForEach(c => redditPosts.Add(RedditPostFactory.CreateRedditPosts(c)));
 

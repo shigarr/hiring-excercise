@@ -11,6 +11,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Business Layer", "2. Bus
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Adbrain.FullStack.Domain", "Adbrain.FullStack.Domain\Adbrain.FullStack.Domain.csproj", "{1E3F5029-23FA-4563-8603-E2998E5088A5}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 Utilities", "1 Utilities", "{A4AA828F-88D8-49E0-8F9C-1994A4A494AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Adbrain.FullStack.Utilities", "Adbrain.FullStack.Utilities\Adbrain.FullStack.Utilities.csproj", "{7D254CEC-2528-4D7B-AB48-050E9BB70844}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +29,10 @@ Global
 		{1E3F5029-23FA-4563-8603-E2998E5088A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1E3F5029-23FA-4563-8603-E2998E5088A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1E3F5029-23FA-4563-8603-E2998E5088A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D254CEC-2528-4D7B-AB48-050E9BB70844}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D254CEC-2528-4D7B-AB48-050E9BB70844}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D254CEC-2528-4D7B-AB48-050E9BB70844}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D254CEC-2528-4D7B-AB48-050E9BB70844}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -32,5 +40,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{31A6AF73-F177-42A8-818E-D3705F9C9774} = {B08FE3A2-2FAB-487C-A0FE-CFAFA5D5CCAA}
 		{1E3F5029-23FA-4563-8603-E2998E5088A5} = {C18C6E2D-49E9-42DB-9FA4-5B249D82D205}
+		{7D254CEC-2528-4D7B-AB48-050E9BB70844} = {A4AA828F-88D8-49E0-8F9C-1994A4A494AF}
 	EndGlobalSection
 EndGlobal
