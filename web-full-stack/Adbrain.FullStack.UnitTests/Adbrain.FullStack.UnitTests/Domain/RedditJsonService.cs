@@ -5,6 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using NBehave.Spec.NUnit;
+using Adbrain.FullStack.Domain.Interfaces;
+using Adbrain.FullStack.Domain.DomainService;
+using Adbrain.FullStack.Domain.Entities;
 
 namespace Adbrain.FullStack.UnitTests.Domain
 {
@@ -32,8 +35,14 @@ namespace Adbrain.FullStack.UnitTests.Domain
       [Test]
       public void then_get_json_raw_string()
       {
-         string json = redditDomainService.GetJsonRawString();
-         json.ShouldNotBeEmpty();
+         redditDomainService.JsonRaw.ShouldNotBeEmpty();
+      }
+
+      [Test]
+      public void then_get_reddit_posts() 
+      {
+         List<RedditPost> posts = redditDomainService.GetRedditPosts(); 
+         posts.Count().ShouldBeGreaterThanOrEqualTo(100);
       }
 
    }
