@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DomainService\OnlineRedditDomainService.cs" />
     <Compile Include="DomainService\RedditDomainService.cs" />
     <Compile Include="Entities\BaseEntity.cs" />
     <Compile Include="Entities\Media.cs" />
@@ -52,12 +53,15 @@
     <Compile Include="Entities\RedditPost.cs" />
     <Compile Include="Entities\UserReport.cs" />
     <Compile Include="Factory\RedditPostFactory.cs" />
+    <Compile Include="Interfaces\IOnlineRedditDomainService.cs" />
     <Compile Include="Interfaces\IRedditDomainService.cs" />
+    <Compile Include="Interfaces\Repository\IRedditPostRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

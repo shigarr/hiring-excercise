@@ -5,10 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Adbrain.FullStack.Domain.Interfaces
+namespace Adbrain.FullStack.Domain.Interfaces.Repository
 {
-   public interface IRedditDomainService
+   public interface IRedditPostRepository
    {
-      List<RedditPost> GetPostsByDomainAndGroupedByAuthor(string domain);
+      List<RedditPost> GetPostsByDomain(string domain);
    }
 }
