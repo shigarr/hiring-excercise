@@ -1,4 +1,5 @@
-﻿using Adbrain.FullStack.Domain.Interfaces.Repository;
+﻿using Adbrain.FullStack.Domain.Entities;
+using Adbrain.FullStack.Domain.Interfaces.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,11 +8,12 @@ using System.Threading.Tasks;
 
 namespace Adbrain.FullStack.Repository.Repository
 {
-   public class RedditPostRepository : IRedditPostRepository
+   public class RedditPostRepository : BaseRepository, IRedditPostRepository
    {
-      public List<Domain.Entities.RedditPost> GetPostsByDomain(string domain)
+      public List<RedditPost> GetPostsByDomain(string domain)
       {
-         throw new NotImplementedException();
+         var posts = Context.RedditPosts.Where(p => p.Domain.ToLower().Equals(domain.ToLower())).ToList();
+         return posts;
       }
    }
 }

@@ -9,6 +9,6 @@ namespace Adbrain.FullStack.Domain.Interfaces
 {
    public interface IRedditDomainService
    {
-      List<RedditPost> GetPostsByDomainAndGroupedByAuthor(string domain);
+      List<RedditPost> GetPostsByDomain(string domain);
    }
 }
