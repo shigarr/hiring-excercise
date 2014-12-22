@@ -14,7 +14,7 @@ namespace Adbrain.FullStack.WebApi.Models
    public class Item
    {
       public int id { get; set; }
-      public string createdDate { get; set; }
+      public DateTime? createdDate { get; set; }
       public string title { get; set; }
       public string premalink { get; set; }
    }
