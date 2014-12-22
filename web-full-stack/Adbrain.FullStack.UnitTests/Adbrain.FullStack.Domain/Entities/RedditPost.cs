@@ -13,36 +13,36 @@ namespace Adbrain.FullStack.Domain.Entities
       public string SubReddit { get; set; }
       public string SelfTextHtml { get; set; }
       public string SelfText { get; set; }
-      public string Likes { get; set; }
+      public int Likes { get; set; }
       public string LinkFlairText { get; set; }
       public string RedditId { get; set; }
-      public string Gilded { get; set; }
-      public string Clicked { get; set; }
+      public int Gilded { get; set; }
+      public bool Clicked { get; set; }
       public string ReportReasons { get; set; }
       public string Author { get; set; }
-      public string Score { get; set; }
+      public int Score { get; set; }
       public string ApprovedBy { get; set; }
-      public string Over18 { get; set; }
-      public string Hidden { get; set; }
+      public bool Over18 { get; set; }
+      public bool Hidden { get; set; }
       public string Thumbnail { get; set; }
       public string SubredditId { get; set; }
-      public string Edited { get; set; }
+      public bool Edited { get; set; }
       public string LinkFlairCssClass { get; set; }
       public string AuthorFlairCssClass { get; set; }
-      public string Downs { get; set; }
-      public string Saved { get; set; }
-      public string IsSelf { get; set; }
+      public int Downs { get; set; }
+      public bool Saved { get; set; }
+      public bool IsSelf { get; set; }
       public string Name { get; set; }
       public string PermaLink { get; set; }
-      public string Stickied { get; set; }
-      public string Created { get; set; }
+      public bool Stickied { get; set; }
+      public DateTime? Created { get; set; }
       public string Url { get; set; }
       public string AuthorFlairText { get; set; }
       public string Title { get; set; }
-      public string CreatedUtc { get; set; }
-      public string Ups { get; set; }
-      public string NumComments { get; set; }
-      public string Visited { get; set; }
+      public DateTime? CreatedUtc { get; set; }
+      public int Ups { get; set; }
+      public int NumComments { get; set; }
+      public bool Visited { get; set; }
       public string NumReports { get; set; }
       public string Distinguished { get; set; }
 

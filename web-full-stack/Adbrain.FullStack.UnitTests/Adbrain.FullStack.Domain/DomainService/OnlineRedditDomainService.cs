@@ -19,7 +19,14 @@ namespace Adbrain.FullStack.Domain.DomainService
       #endregion
 
       #region Properties
+      /// <summary>
+      /// Reddit webapi url
+      /// </summary>
       public string Url { get; private set; }
+      
+      /// <summary>
+      /// read and return the results of Reddit response utilizing Url
+      /// </summary>
       public string JsonRaw 
       {
          get
@@ -37,14 +44,24 @@ namespace Adbrain.FullStack.Domain.DomainService
       #endregion
 
       #region Constructors
-      public OnlineRedditDomainService(string url, string category, int count)
+      /// <summary>
+      /// Instantiate OnlineRedditDomainService that also intialise Reddit service URL
+      /// </summary>
+      /// <param name="domain">Url domain</param>
+      /// <param name="category">category e.g. sports</param>
+      /// <param name="count">number of records to fetch</param>
+      public OnlineRedditDomainService(string domain, string category, int count)
       {
-         Url = string.Format("{0}{1}.json?limit={2}", url, category, count.ToString());
+         Url = string.Format("{0}{1}.json?limit={2}", domain, category, count.ToString());
       }
 
       #endregion
       
       #region Public Methods
+      /// <summary>
+      /// parse the raw json string to RedditPost list and return
+      /// </summary>
+      /// <returns>a list of RedditPosts</returns>
       public List<RedditPost> GetRedditPosts()
       {
          dynamic jsonObject = JsonConvert.DeserializeObject(JsonRaw);

@@ -12,5 +12,10 @@ namespace Adbrain.FullStack.Utilities
       {
          throw new NotImplementedException();
       }
+
+      public static DateTime? ConverToDateTime(long time)
+      {
+         return new DateTime?(new DateTime(1970, 1, 1).AddSeconds(time));
+      }
    }
 }

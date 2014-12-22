@@ -16,6 +16,10 @@ namespace Adbrain.FullStack.Domain.DomainService
       #endregion
 
       #region Constructors
+      /// <summary>
+      /// Intantiate RedditDomainService with reddit post repository
+      /// </summary>
+      /// <param name="redditPostRepository">reddit post repository</param>
       public RedditDomainService(IRedditPostRepository redditPostRepository)
       {
          this._redditPostRepository = redditPostRepository;
@@ -23,6 +27,11 @@ namespace Adbrain.FullStack.Domain.DomainService
       #endregion
 
       #region Public Methods
+      /// <summary>
+      /// Get RedditPosts by domain
+      /// </summary>
+      /// <param name="domain">domain name e.g. youtube.com</param>
+      /// <returns></returns>
       public List<RedditPost> GetPostsByDomain(string domain)
       {
          if(string.IsNullOrEmpty(domain))

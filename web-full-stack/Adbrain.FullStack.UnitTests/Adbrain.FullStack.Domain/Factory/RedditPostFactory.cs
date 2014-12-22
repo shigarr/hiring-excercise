@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Adbrain.FullStack.Utilities;
 
 namespace Adbrain.FullStack.Domain.Factory
 {
@@ -20,44 +21,44 @@ namespace Adbrain.FullStack.Domain.Factory
          reddit.AuthorFlairCssClass = jsonObject.author_flair_css_class;
          reddit.AuthorFlairText = jsonObject.author_flair_text;
          reddit.BannedBy = jsonObject.banned_by;
-         reddit.Clicked = jsonObject.clicked;
-         reddit.Created = jsonObject.created;
-         reddit.CreatedUtc = jsonObject.created_utc;
+         reddit.Clicked = jsonObject.clicked == null ? false : jsonObject.clicked;
+         reddit.Created = jsonObject.created == null ? null : Utilities.Utilities.ConverToDateTime((long)jsonObject.created);
+         reddit.CreatedUtc = jsonObject.created_utc == null ? null : Utilities.Utilities.ConverToDateTime((long)jsonObject.created_utc);
          reddit.Distinguished = jsonObject.distinguished;
          reddit.Domain = jsonObject.domain;
-         reddit.Downs = jsonObject.downs;
-         reddit.Edited = jsonObject.edited;
-         reddit.Gilded = jsonObject.gilded;
-         reddit.Hidden = jsonObject.hidden;
+         reddit.Downs = jsonObject.downs == null ? 0 : (int)jsonObject.downs;
+         reddit.Edited = jsonObject.edited == null ? false : jsonObject.edited; ;
+         reddit.Gilded = jsonObject.gilded == null ? 0 : (int)jsonObject.gilded;
+         reddit.Hidden = jsonObject.hidden == null ? false : jsonObject.hidden;
          reddit.RedditId = jsonObject.id;
-         reddit.IsSelf = jsonObject.is_self;
-         reddit.Likes = jsonObject.likes;
+         reddit.IsSelf = jsonObject.is_self == null ? false : jsonObject.is_self;
+         reddit.Likes = (jsonObject.likes == null ? 0 : (int)jsonObject.likes);
          reddit.LinkFlairCssClass = jsonObject.link_flair_css_class;
          reddit.LinkFlairText = jsonObject.link_flair_text;
          reddit.Media = GetMedia(jsonObject.media);
          reddit.MediaEmbed = GetMediaEmbed(jsonObject.media_embed);
          reddit.ModReports = GetModeReports(jsonObject.mod_reports);
          reddit.Name = jsonObject.name;
-         reddit.NumComments = jsonObject.num_comments;
+         reddit.NumComments = jsonObject.num_comments == null ? 0 : (int)jsonObject.num_comments;
          reddit.NumReports = jsonObject.num_reports;
-         reddit.Over18 = jsonObject.over_18;
+         reddit.Over18 = jsonObject.over_18 == null ? false : jsonObject.over_18;
          reddit.PermaLink = jsonObject.permalink;
          reddit.ReportReasons = jsonObject.report_reasons;
-         reddit.Saved = jsonObject.saved;
-         reddit.Score = jsonObject.score;
+         reddit.Saved = jsonObject.saved == null ? false : jsonObject.saved;
+         reddit.Score = jsonObject.score == null ? 0 : (int)jsonObject.score;
          reddit.SecureMedia = GetMedia(jsonObject.secure_media);
          reddit.SecureMediaEmbed = GetMediaEmbed(jsonObject.secure_media_embed);
          reddit.SelfText = jsonObject.selftext;
          reddit.SelfTextHtml = jsonObject.selftext_html;
-         reddit.Stickied = jsonObject.stickied;
+         reddit.Stickied = jsonObject.stickied == null ? false : jsonObject.stickied;
          reddit.SubReddit = jsonObject.subreddit;
          reddit.SubredditId = jsonObject.subreddit_id;
          reddit.Thumbnail = jsonObject.thumbnail;
          reddit.Title = jsonObject.title;
-         reddit.Ups = jsonObject.ups;
+         reddit.Ups = jsonObject.ups == null ? 0 : (int)jsonObject.ups;
          reddit.Url = jsonObject.url;
          reddit.UserReports = GetUserReports(jsonObject.user_reports);
-         reddit.Visited = jsonObject.visited;
+         reddit.Visited = jsonObject.visited == null ? false : jsonObject.visited;
 
          return reddit;
       }

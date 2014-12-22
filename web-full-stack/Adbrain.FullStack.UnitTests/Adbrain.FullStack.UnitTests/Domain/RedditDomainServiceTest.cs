@@ -33,13 +33,13 @@ namespace Adbrain.FullStack.UnitTests.Domain
       [ExpectedException(typeof(ArgumentException))]
       public void invalid_domain()
       {
-         var posts = redditDomainService.GetPostsByDomainAndGroupedByAuthor("");
+         var posts = redditDomainService.GetPostsByDomain("");
       }
 
       [Test]
       public void get_posts() 
       {
-         var posts = redditDomainService.GetPostsByDomainAndGroupedByAuthor("youtube.com");
+         var posts = redditDomainService.GetPostsByDomain("youtube.com");
          posts.Count().ShouldBeGreaterThan(0);
       }
    }
